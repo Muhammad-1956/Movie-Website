@@ -1,0 +1,22 @@
+.footer{
+  h4{
+    text-align: start;
+    color: white;
+    font-weight: bold;
+  }
+  p{
+    color: #eee;
+  }
+  ul{
+    list-style: none;
+
+    li{
+      color: #928e8e;
+      text-align: start;
+      &:hover{
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}

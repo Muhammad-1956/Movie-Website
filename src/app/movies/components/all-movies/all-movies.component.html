@@ -1,0 +1,11 @@
+<!-- Selection Component -->
+<app-selection [data]="categories"(selectedValue)="filter($event)"></app-selection>
+
+<h2 class="text-white bold mt-4">{{header}}</h2>
+<!-- Movie Component -->
+<app-movie [movies]="selectedMovies" *ngIf="!loading"></app-movie>
+
+<!-- Spinner Component -->
+<app-spinner *ngIf="loading"></app-spinner>
+
+

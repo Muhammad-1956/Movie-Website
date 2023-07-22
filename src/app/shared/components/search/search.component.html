@@ -1,0 +1,48 @@
+<!-- Search -->
+<div class="search bg-dark py-4 rounded my-4">
+  <form (ngSubmit)="getMovieByName()" class="row g-3">
+    <div class="col-5 offset-3">
+      <input type="text" [(ngModel)]="movieTitle" name="movieTitle" class="form-control" placeholder="Enter movie title">
+    </div>
+    <div class="col-3">
+      <button type="submit" class="btn btn-success px-2">Search</button>
+    </div>
+  </form>
+    <div class="row justify-content-around my-5 px-5 py-1 rounded" *ngIf="searchedMovie && !loading">
+      <div class="col-md-4 image">
+        <img class="w-100 rounded" src="{{searchedMovie?.Poster}}" alt="">
+      </div>
+      <div class="col-md-7 d-flex text-container flex-column" style="color: white; ">
+        <div>
+          <p><span>Title: </span>{{searchedMovie?.Title}}</p>
+        </div>
+        <div>
+          <p ><span>Awards:</span><i class="bi bi-award-fill"></i> {{searchedMovie?.Awards}}</p>
+        </div>
+        <div>
+          <p><span>Plot:</span>{{searchedMovie?.Plot}}</p>
+        </div>
+        <div>
+          <p><span>Country:</span>{{searchedMovie?.Country}}</p>
+        </div>
+        <div>
+          <p><span>Language:</span>{{searchedMovie?.Language}}</p>
+        </div>
+        <div>
+          <p>
+            <span>Released:</span>{{searchedMovie?.Released}}
+          </p>
+        </div>
+        <div>
+          <p><span>Writers:</span>{{searchedMovie?.Writer }}</p>
+        </div>
+        <div>
+          <p><span>Director:</span>{{searchedMovie?.Director }}</p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="errorMessage && !loading" class="mx-auto"  style="width: 50%;">
+      <p class="alert alert-warning text-dark text-center fw-bold mt-3"><i class="bi bi-chat-square-text-fill"></i> {{errorMessage}}</p>
+    </div>
+    <app-spinner *ngIf="loading"></app-spinner>
+</div>

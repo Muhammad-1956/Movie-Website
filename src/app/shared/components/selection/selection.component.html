@@ -1,0 +1,10 @@
+<!-- <label class="my-1">{{title}}</label>
+<select class="form-control" (change)="emitter($event)">
+  <option value="{{option.key}}" [selected]="i == 0" *ngFor="let option of data; index as i">&#160;{{option.value}}</option>
+</select> -->
+<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categories" aria-controls="categories" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button> -->
+<div class="d-flex flex-justify-between bg-dark p-2 rounded collapse navbar-collapse my-4" id="categories">
+  <a routerLinkActive="active" class="btn btn-secondary mx-2" (click)="emitter(option)" *ngFor="let option of data; index as i">{{option.value}}</a>
+</div>

@@ -1,0 +1,17 @@
+option{
+  background-color: #9896968c;
+  border-radius: 10px !important;
+  margin-right: 5vw;
+}
+select{
+  background-color: #aba6a66d;
+  cursor: pointer;
+  border: none;
+  &:focus {
+    box-shadow: none;
+  }
+  padding: 10px;
+}
+a{
+  background-color: #424242;
+}

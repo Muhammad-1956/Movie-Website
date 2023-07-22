@@ -1,0 +1,32 @@
+<section *ngIf="watchList && !loading" class="watch mt-5">
+  <h2>{{'your watchlist' | titlecase}} <i class="fa-solid fa-tv h4"></i></h2>
+<hr>
+<div class="row pt-2 px-2 mb-4 text-white">
+  <div class="col-md-3 mt-3" *ngFor="let movie of watchList; index as i">
+      <div class="card bg-dark">
+        <div class="image-container">
+          <img src="{{movie.backdrop_path}}" alt="" class="card-img-top">
+        </div>
+        <div class="icons d-flex flex-column align-items-center">
+          <span><i class="fa-regular fa-bookmark movie-{{i}}" id="movie-{{i}}"></i></span>
+          <span routerLink="/movie-details/{{movie.id}}"><i class="fa-regular fa-eye"></i></span>
+        </div>
+        <div class="card-body text-white">
+          <h5 class="card-title text-truncate">{{movie.title}}</h5>
+          <p><i class="bi bi-star-fill"></i> {{movie.vote_average}}</p>
+          <p class="text-secondary">Language: {{movie.original_language}}</p>
+          <!-- <p>Language: {{movie.release_date}}</p> -->
+        </div>
+      </div>
+  </div>
+</div>
+</section>
+<div class="div mt-4" *ngIf="!watchList && !loading">
+  <p class="alert alert-warning text-center h6 fw-bold text-wrap">
+    There are no movies in your watchlist at the moment.
+    Start adding movies by clicking the bookmark icon on a movie you want to watch.
+  </p>
+
+</div>
+<!-- Spinner Component -->
+<app-spinner *ngIf="loading"></app-spinner>

@@ -1,0 +1,24 @@
+.header{
+  padding: 1rem;
+}
+.actor-info{
+  position: relative;
+  overflow: hidden;
+  .image-overlay{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4vh;
+    transition: opacity 0.4s ease-in-out;
+    background-color: white;
+    p{
+      color: black;
+    }
+  }
+  &:hover .image-overlay{
+    opacity: 1;
+  }
+}
+

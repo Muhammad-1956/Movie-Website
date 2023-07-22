@@ -1,0 +1,10 @@
+img{
+  height: 72vh;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  background-color: black;
+  border-radius: 17px;
+}
+.carousel-indicators [data-bs-target] {
+  padding: 0.2rem;
+}

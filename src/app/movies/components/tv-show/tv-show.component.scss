@@ -1,0 +1,48 @@
+.header{
+  padding: 1rem;
+  text-align: center;
+}
+.show-info{
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  .image-overlay{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(110%);
+    transition: transform 0.8s ease-in-out;
+    background-color: rgba(111, 106, 106, 0.771);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: bold;
+    color: white;
+    p{
+      text-align: center;
+    }
+    .overview{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 80%;
+      height: 29vh;
+    }
+  }
+  &:hover .image-overlay{
+    transform: translateY(0);
+  }
+}
+.modal-content{
+  max-height: 80vh;
+}
+.modal-body{
+  overflow: hidden;
+  img,.image-overlay{
+    height: 69%;
+  }
+}

@@ -3,6 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
+import { SharedModule } from './shared/shared.module';
+import { MoviesModule } from './movies/movies.module';
+import { HttpClientModule } from '@angular/common/http';
+import { OverlayModule } from "@angular/cdk/overlay";
+
+
+
 
 @NgModule({
   declarations: [
@@ -10,9 +18,14 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CommonModule,
+    AppRoutingModule,
+    HttpClientModule,
+    OverlayModule,
+    SharedModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+}

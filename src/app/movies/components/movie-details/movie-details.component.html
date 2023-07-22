@@ -1,0 +1,80 @@
+<div class="container" *ngIf="!loading">
+  <div class="row justify-content-around my-5 bg-dark p-5 rounded">
+    <div class="col-md-5 image">
+      <img class="w-100 rounded" src="{{movie.poster_path}}" alt="">
+    </div>
+    <div class="col-md-6 d-flex text-container flex-column" style="color: white; ">
+      <div>
+        <p><span>Title: </span>{{movie.title}}</p>
+      </div>
+      <div>
+        <p *ngIf="movie.tagline"><span>Tagline: </span>"{{movie.tagline}}"</p>
+      </div>
+      <div>
+        <p><span>Overview: </span>{{movie.overview}}</p>
+      </div>
+      <div>
+        <p><span>Rate: </span><i class="bi bi-star-fill"></i> {{movie.vote_average}} <span class="text-secondary" style="font-size: 1rem;">({{movie.popularity}})</span></p>
+      </div>
+      <div>
+        <p><span>Language: </span>{{movie.original_language}}</p>
+      </div>
+      <div>
+        <p><span>Release date: </span>{{movie.release_date | date}}</p>
+      </div>
+      <div>
+        <p *ngIf="movie.revenue > 0"><span>Revenue: </span>{{movie.revenue | currency }}</p>
+      </div>
+      <div class="d-flex flex-wrap justify-content-start mt-2">
+        <span *ngFor="let genre of movie.genres; first as first; last as last"
+        [ngStyle]="{'background-color': first ? '#6c1515' : last ? '#4e2079' : 'black'}">
+        #{{genre.name}}
+      </span>
+      </div>
+      <!-- <div class="logo-compaines d-flex justify-content-between flex-wrap mt-4" *ngIf="movie.production_companies">
+        <img class="mt-2" *ngFor="let logo of movie.production_companies; index as i" src="{{logo.logo_path}}" alt="">
+      </div> -->
+    </div>
+  </div>
+</div>
+<!-- Spinner Component -->
+<app-spinner *ngIf="loading"></app-spinner>
+<!-- <div class="container d-flex justify-content-center">
+  <div class="d-flex justify-content-between my-5 bg-dark p-5 rounded">
+    <div class="image" style="width: 40%;">
+      <img class="w-100 rounded" src="{{movie.poster_path}}" alt="">
+    </div>
+    <div class="d-flex text-container flex-column" style="color: white; width:50% ">
+      <div>
+        <p><span>Title: </span>{{movie.title}}</p>
+      </div>
+      <div>
+        <p><span>Tagline: </span>"{{movie.tagline}}"</p>
+      </div>
+      <div>
+        <p><span>Overview: </span>{{movie.overview}}</p>
+      </div>
+      <div>
+        <p><span>Rate: </span><i class="bi bi-star-fill"></i> {{movie.vote_average}} <span class="text-secondary" style="font-size: 1rem;">({{movie.popularity}})</span></p>
+      </div>
+      <div>
+        <p><span>Language: </span>{{movie.original_language}}</p>
+      </div>
+      <div>
+        <p><span>Release date: </span>{{movie.release_date | date}}</p>
+      </div>
+      <div>
+        <p *ngIf="movie.revenue > 0"><span>Revenue: </span>{{movie.revenue | currency }}</p>
+      </div>
+      <div class="d-flex flex-wrap justify-content-start mt-2">
+        <span *ngFor="let genre of movie.genres; first as first; last as last"
+        [ngStyle]="{'background-color': first ? '#6c1515' : last ? '#4e2079' : 'black'}">
+        #{{genre.name}}
+      </span>
+      </div>
+      <div class="logo-compaines d-flex justify-content-between flex-wrap mt-4" *ngIf="movie.production_companies">
+        <img class="mt-2" *ngFor="let logo of movie.production_companies; index as i" src="{{logo.logo_path}}" alt="">
+      </div>
+    </div>
+  </div>
+</div> -->
