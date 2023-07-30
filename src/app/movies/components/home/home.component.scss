@@ -34,6 +34,19 @@
   }
 }
 
+//Cinema
+.cinema-places{
+  border-bottom: 1px solid #656464;
+  div{
+    gap: 1vw;
+    img{
+      margin-bottom: .05vh;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
 //Small Devices
 @media (min-width: 320px) and (max-width: 480px){
 //Store Apps
@@ -66,18 +79,6 @@
 }
 }
 
-//Cinema
-.cinema-places{
-  border-bottom: 1px solid #656464;
-  div{
-    gap: 1vw;
-    img{
-      margin-bottom: .05vh;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-  }
-}
 //Medium Devices
 @media (min-width: 481px) and (max-width: 768px){
   //Store Apps
