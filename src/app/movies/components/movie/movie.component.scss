@@ -1,11 +1,6 @@
 @import '~bootstrap-icons/font/bootstrap-icons.css';
 .card{
   cursor: pointer;
-}
-i{
-  color: rgb(224, 224, 45);
-}
-.card{
   position: relative;
   overflow: hidden;
   .icons {
@@ -22,6 +17,12 @@ i{
       color: white;
       font-size: 1.2rem;
       margin-bottom: 1vh;
+    }
+    .bi-bookmark-fill{
+      color: rgb(224, 224, 45);
+    }
+    .fa-eye{
+      color: whitesmoke;
     }
   }
   &:hover .icons {
