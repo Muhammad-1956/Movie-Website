@@ -9,12 +9,15 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./actor.component.scss']
 })
 export class ActorComponent {
+
   actors: any;
   loading = false
+
   constructor(private db: MovieService, private title: Title){
     this.title.setTitle('Actors')
     this.getActors();
   }
+
   //Get Actors
   getActors(){
     this.loading = true

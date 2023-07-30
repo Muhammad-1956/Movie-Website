@@ -22,8 +22,6 @@ export class AllMoviesComponent {
     {key: 'now_playing', value: 'Now Playing Movies'},
     {key: 'upcoming', value: 'Up Coming Movies'},
     {key: 'top_rated', value: 'Top Rated Movies'},
-    // {key: 'trending/movie/day', value: 'Trending Movies'},
-    // {key: 'tv/changes', value: 'Originals'},
   ]
   selectedMovies!: Movie;
   header: string ='Popular Movies';
@@ -103,15 +101,6 @@ export class AllMoviesComponent {
     })
   }
 
-  //Get Tranding Movies Error
-  // getTrendingMovies(){
-  //   this.db.getTrendingMovies().subscribe((res:any)=>{
-  //     this.trendingMovies = this.modifyData(res)
-  //   }, err =>{
-  //     console.log('Error while fetching popular movies', err)
-  //   })
-  // }
-
   //Get TopRated Movies
   getTopRatedMovies(){
     this.db.getTopRatedMovies().subscribe((res:any)=>{
@@ -120,19 +109,7 @@ export class AllMoviesComponent {
       console.log('Error while fetching popular movies', err)
     })
   }
-  //Get TopRated Movies
-  // getOriginalMovies(){
-  //   this.db.getOriginals().subscribe((res:any)=>{
-  //     this.originals = this.modifyData(res)
-  //   }, err =>{
-  //     console.log('Error while fetching popular movies', err)
-  //   })
-  // }
-  getTv(){
-    this.db.getTv().subscribe((res:any) =>{
-      console.log(res)
-    })
-  }
+
   //Modify Data
   modifyData(movies: Movie): Movie{
     if(movies.results){

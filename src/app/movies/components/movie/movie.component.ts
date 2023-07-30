@@ -12,6 +12,8 @@ clsadicked = false
 times: number = 0
 book: any;
 watchList: any[]= [];
+p: number = 1; // The current page number
+itemsPerPage: number = 20; // The number of items to display per page
 
 constructor(){
 }
@@ -22,7 +24,7 @@ ngOnInit(){
   //   // Loop through the watchList array and compare the popularity property of each saved movie
   //   // with the popularity property of each movie in the movies array
   //   this.movies?.forEach((movie: Movie |any, i: number) => {
-  //     const savedMovie = this.watchList.find((savedMovie: Movie |any) => savedMovie.popularity === movie.popularity);
+  //     const savedMovie = this.watchList.find(item=> item.popularity === movie.popularity);
   //     console.log('movie', movie);
   //     console.log('savedMovie', savedMovie);
   //     if (savedMovie) {

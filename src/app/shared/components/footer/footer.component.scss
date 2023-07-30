@@ -1,6 +1,5 @@
 .footer{
   h4{
-    text-align: start;
     color: white;
     font-weight: bold;
   }
@@ -9,10 +8,9 @@
   }
   ul{
     list-style: none;
-
+    padding: 0px;
     li{
       color: #928e8e;
-      text-align: start;
       &:hover{
         color: white;
         cursor: pointer;
@@ -20,3 +18,10 @@
     }
   }
 }
+@media (min-width: 320px) and (max-width: 480px){
+  .footer-container{
+    // text-align: center;
+    justify-content: center !important;
+  }
+}
+

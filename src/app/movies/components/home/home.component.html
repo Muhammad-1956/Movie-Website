@@ -7,12 +7,22 @@
 <!-- Search Component -->
 <app-search></app-search>
 
+<!--Cinema places-->
+<section class="cinema-places bg-dark p-4 rounded">
+  <div class="d-flex justify-content-start flex-wrap">
+    <img src="../../../../assets/panel-gd-300x150.jpg" alt="Gold">
+    <img src="../../../../assets/panel-fx-300x150.jpg" alt="Vip">
+    <img src="../../../../assets/panel-mx-300x150.jpg" alt="Max">
+    <img src="../../../../assets/panel-kd-300x150.jpg" alt="Kids">
+  </div>
+</section>
+
 <!-- Store apps -->
 <section class="apps d-flex justify-content-around flex-wrap p-5 rounded bg-dark">
   <div class="text d-flex flex-column">
     <h2 class="fw-bold">{{'get our latest update!' | titlecase}}</h2>
     <p>Join Our Newsletter And Get $10 Discount</p>
-    <form class="d-flex justify-content-between">
+    <form class="d-flex justify-content-between flex-wrap">
       <input type="text" class="form-control py-2" placeholder="Email">
       <button class="btn btn-warning px-4 py-2">Send</button>
     </form>
@@ -21,7 +31,7 @@
     <div class="download d-flex flex-column flex-wrap align-items-center">
       <h5 class="fw-bold">Download Our App</h5>
       <p>15% Discount on your first purchase.</p>
-      <div class="image-container d-flex justify-content-between mt-2">
+      <div class="image-container d-flex justify-content-between mt-2 flex-wrap">
         <img src="../../../../assets/ios-270x80.png" alt="ios">
         <img src="../../../../assets/android-268x80.png" alt="android">
       </div>

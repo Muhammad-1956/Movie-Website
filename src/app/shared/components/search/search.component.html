@@ -1,14 +1,14 @@
 <!-- Search -->
 <div class="search bg-dark py-4 rounded my-4">
   <form (ngSubmit)="getMovieByName()" class="row g-3">
-    <div class="col-5 offset-3">
+    <div class="col-md-5 col-7 offset-md-3 offset-1">
       <input type="text" [(ngModel)]="movieTitle" name="movieTitle" class="form-control" placeholder="Enter movie title">
     </div>
-    <div class="col-3">
+    <div class="col-md-3 col-4">
       <button type="submit" class="btn btn-success px-2">Search</button>
     </div>
   </form>
-    <div class="row justify-content-around my-5 px-5 py-1 rounded" *ngIf="searchedMovie && !loading">
+    <div class="row justify-content-around mt-5 px-5 py-1 rounded" *ngIf="searchedMovie && !loading">
       <div class="col-md-4 image">
         <img class="w-100 rounded" src="{{searchedMovie?.Poster}}" alt="">
       </div>

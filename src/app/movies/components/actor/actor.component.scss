@@ -20,5 +20,11 @@
   &:hover .image-overlay{
     opacity: 1;
   }
+
+}
+@media (min-width:320px) and (max-width: 480px){
+  h2{
+    font-size: calc(1.325rem + -.8vw);
+  }
 }
 

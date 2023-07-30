@@ -14,6 +14,7 @@
       img{
         max-width: 49%;
         max-height: 54%;
+        margin-right: 5px;
       }
   }
 }
@@ -31,4 +32,151 @@
       color: orange; text-decoration: none;
     }
   }
+}
+
+//Small Devices
+@media (min-width: 320px) and (max-width: 480px){
+//Store Apps
+.apps{
+  text-align: center;
+  .text,.app-store{
+    width: 100%;
+    margin-bottom: 1rem;
+    form{
+      width: 100%;
+      input{
+        display: block;
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 10px;
+      }
+      button{
+        width: 100%;
+      }
+    }
+    .image-container {
+      justify-content: center !important;
+      img{
+        max-width: 50%;
+        padding-right: 5px;
+        margin-bottom: .6rem;
+      }
+    }
+  }
+}
+}
+
+//Cinema
+.cinema-places{
+  border-bottom: 1px solid #656464;
+  div{
+    gap: 1vw;
+    img{
+      margin-bottom: .05vh;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+}
+//Medium Devices
+@media (min-width: 481px) and (max-width: 768px){
+  //Store Apps
+  .apps{
+    text-align: center;
+    .text,.app-store{
+      width: 100%;
+      margin-bottom: 1rem;
+      form{
+        width: 100%;
+        input{
+          display: block;
+          width: 100%;
+          margin-right: 0px;
+          margin-bottom: 10px;
+        }
+        button{
+          width: 100%;
+        }
+      }
+      .image-container {
+        justify-content: center !important;
+        img{
+          max-width: 50%;
+          padding-right: 5px;
+          margin-bottom: .6rem;
+        }
+      }
+    }
+  }
+  .cinema-places{
+    div{
+      justify-content: center !important;
+    }
+}
+}
+
+//Large Screen
+@media (min-width: 769px) and (max-width: 1200px){
+//Store Apps
+.apps{
+  h2{
+    font-size: calc(1.325rem + .5vw);
+  }
+    .text,.app-store{
+      form{
+        width: 100%;
+        input{
+          display: block;
+          width: 100%;
+          margin-right: 0px;
+          margin-bottom: 10px;
+        }
+        button{
+          width: 100%;
+        }
+      }
+      .image-container {
+        justify-content: center !important;
+        margin-top: 0 !important;
+        img{
+          width: 100%;
+          max-height: 40%;
+          margin-bottom: -4.5px;
+        }
+      }
+    }
+  }
+
+}
+//Xlarge Screen
+@media (min-width: 1201px){
+//Store Apps
+.apps{
+  h2{
+    font-size: calc(1.325rem + .5vw);
+  }
+    .text,.app-store{
+      form{
+        width: 100%;
+        input{
+          width: 74%;
+          margin-right: 0px;
+          margin-bottom: 10px;
+        }
+        button{
+          width: 25%;
+          padding: 0 0 0 0 ;
+          height: 43px;
+        }
+      }
+      .image-container {
+        justify-content: center !important;
+        margin-top: 0px !important;
+        img{
+          margin-bottom: .3rem;
+        }
+      }
+    }
+  }
+
 }

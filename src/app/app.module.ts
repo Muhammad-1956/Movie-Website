@@ -8,7 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { MoviesModule } from './movies/movies.module';
 import { HttpClientModule } from '@angular/common/http';
 import { OverlayModule } from "@angular/cdk/overlay";
-
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -23,6 +23,7 @@ import { OverlayModule } from "@angular/cdk/overlay";
     HttpClientModule,
     OverlayModule,
     SharedModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent],

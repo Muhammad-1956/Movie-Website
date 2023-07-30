@@ -12,13 +12,15 @@ export class WatchlistComponent {
   loading= false;
   constructor(private title: Title){
     this.title.setTitle('Watchlist')
-    this.loading = true
+    this.loading= true
   }
   ngOnInit(){
     if("watchlist" in localStorage){
       this.watchList = JSON.parse(localStorage.getItem("watchlist")!)
       this.watchList = this.modifyData(this.watchList)
       this.loading = false
+    }else{
+      this.loading= false
     }
   }
   //Modify Data

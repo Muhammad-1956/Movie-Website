@@ -11,7 +11,8 @@ export class TvShowComponent {
 
   loading= false;
   tv_shows: any;
-  poped: any;
+  modal_up: any;
+
   constructor(private db: MovieService, private title: Title){
     this.title.setTitle('Tv Shows')
   }
@@ -19,6 +20,7 @@ export class TvShowComponent {
   ngOnInit(){
     this.getTvShows()
   }
+  //Get TV Shows
   getTvShows(){
     this.loading = true;
     this.db.getTv().subscribe((res:any)=>{
@@ -39,6 +41,6 @@ export class TvShowComponent {
       return tv
     }
     clicked(i: number){
-      this.poped =this.tv_shows.results[i];
+      this.modal_up =this.tv_shows.results[i];
     }
 }

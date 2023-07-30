@@ -1,36 +1,30 @@
 <section class="shows my-4" *ngIf="!loading">
   <div class="header d-flex justify-content-center align-items-center bg-white">
-    <h2 class="fw-bold">Our Guide to the Best TV Shows Available Now</h2>
+    <h2 class="fw-bold">Our Guide To The Best TV Shows Available Now</h2>
   </div>
   <div class="d-flex justify-content-between flex-wrap mt-3">
     <div *ngFor="let show of tv_shows?.results; index as i" class="show-info d-flex flex-column" (click)="clicked(i)" style="width: 24.3%;
     margin-bottom: 1.4vh;">
         <img src="{{show.poster_path}}" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <!-- <div class="image-overlay">
-          <h4 class="fw-bold text-center">{{show.name}}</h4>
-          <div class="overview">
-            <p>{{show.overview}}</p>
-          </div>
-        </div> -->
       </div>
   </div>
 </section>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngIf="!loading">
-  <div class="modal-dialog">
+  <div class="modal-dialog d-flex justify-content-center">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">{{poped?.name}}</h5>
+        <h5 class="modal-title" id="exampleModalLabel">{{modal_up?.name}}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
           <div class="d-flex justify-content-between flex-wrap">
             <div class="show-info d-flex flex-column">
-                <img src="{{poped?.poster_path}}" alt="">
+                <img src="{{modal_up?.poster_path}}" alt="">
                 <div class="image-overlay">
                   <div class="overview">
-                    <p>{{poped?.overview}}</p>
+                    <p>{{modal_up?.overview}}</p>
                   </div>
                 </div>
               </div>

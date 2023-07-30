@@ -37,12 +37,18 @@
     transform: translateY(0);
   }
 }
-.modal-content{
-  max-height: 80vh;
+img{
+  min-height: 14.5vh;
 }
 .modal-body{
   overflow: hidden;
-  img,.image-overlay{
-    height: 69%;
+}
+@media (min-width:320px) and (max-width: 480px){
+  h2{
+    font-size: calc(1.325rem + -.8vw);
+  }
+  .modal-content{
+    margin-top: 12vh;
+    max-width: 81%;
   }
 }

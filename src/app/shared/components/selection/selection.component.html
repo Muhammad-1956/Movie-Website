@@ -5,6 +5,9 @@
 <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categories" aria-controls="categories" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button> -->
-<div class="d-flex flex-justify-between bg-dark p-2 rounded collapse navbar-collapse my-4" id="categories">
-  <a routerLinkActive="active" class="btn btn-secondary mx-2" (click)="emitter(option)" *ngFor="let option of data; index as i">{{option.value}}</a>
-</div>
+  <div class="d-flex justify-content-start bg-dark p-3 rounded my-4" id="categories">
+    <div class="select-container d-flex justify-content-start flex-wrap">
+      <!-- <span class="h5">{{word}}</span> -->
+      <a routerLinkActive="active" class="btn btn-secondary" *ngFor="let option of data; index as i" (click)="emitter(option)">{{option.value}}</a>
+    </div>
+  </div>

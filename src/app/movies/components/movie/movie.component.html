@@ -12,8 +12,14 @@
           <h5 class="card-title text-truncate">{{movie.title}}</h5>
           <p><i class="bi bi-star-fill"></i> {{movie.vote_average}}</p>
           <p class="text-secondary">Language: {{movie.original_language}}</p>
-          <!-- <p>Language: {{movie.release_date}}</p> -->
+          <p>Language: {{movie.release_date}}</p>
         </div>
       </div>
   </div>
 </div>
+<!-- <div class="col-md-3 mt-3" *ngFor="let movie of movies?.results | paginate: { itemsPerPage: itemsPerPage, currentPage: p }; index as i">
+<div class="row">
+  <div class="col-md-12">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div> -->

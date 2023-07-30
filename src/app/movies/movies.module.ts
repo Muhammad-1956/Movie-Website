@@ -11,7 +11,7 @@ import { WatchlistComponent } from './components/watchlist/watchlist.component';
 import { ActorComponent } from './components/actor/actor.component';
 import { TvShowComponent } from './components/tv-show/tv-show.component';
 import { HomeComponent } from './components/home/home.component';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -29,6 +29,7 @@ import { HomeComponent } from './components/home/home.component';
     RouterModule,
     FormsModule,
     SharedModule,
+    NgxPaginationModule
   ],
   exports:[
     AllMoviesComponent,
