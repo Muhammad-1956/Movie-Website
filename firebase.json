@@ -1,17 +1,10 @@
 {
   "hosting": {
-    "target":"tr",
-    "public": "dist",
+    "public": "dist/user",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ]
   }
 }
