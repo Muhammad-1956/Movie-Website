@@ -18,13 +18,16 @@ h2{
     right: 10px;
     width: 20px;
     height: 40px;
-    color: white;
+    color: rgb(224, 224, 45);
     transform: translateX(156%);
     transition: transform 0.3s ease-in-out;
     i{
       color: white;
       font-size: 1.2rem;
       margin-bottom: 1vh;
+    }
+    .fa-solid{
+      color: rgb(224, 224, 45);;
     }
   }
   &:hover .icons {

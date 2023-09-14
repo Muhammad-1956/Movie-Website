@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Movie } from '../../models/movie';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-movie',
@@ -12,8 +13,6 @@ clsadicked = false
 times: number = 0
 book: any;
 watchList: any[]= [];
-p: number = 1; // The current page number
-itemsPerPage: number = 20; // The number of items to display per page
 
 constructor(){
 }
@@ -24,7 +23,7 @@ ngOnInit(){
   //   // Loop through the watchList array and compare the popularity property of each saved movie
   //   // with the popularity property of each movie in the movies array
   //   this.movies?.forEach((movie: Movie |any, i: number) => {
-  //     const savedMovie = this.watchList.find(item=> item.popularity === movie.popularity);
+  //     const savedMovie = this.watchList.find(item=> item.popularity == movie.popularity);
   //     console.log('movie', movie);
   //     console.log('savedMovie', savedMovie);
   //     if (savedMovie) {
@@ -56,10 +55,10 @@ marked(){
   this.book.classList.add('bi-bookmark-fill', 'fa-solid', 'saved')
 }
 
-  addToWatchlist(movie: Movie){
+  addToWatchlist(movie: Movie | any){
     if("watchlist" in localStorage){
       this.watchList = JSON.parse(localStorage.getItem("watchlist")!)
-      this.add(movie)
+      this.watchList.find(custom_item => custom_item.original_title == movie.original_title) ? Swal.fire(`<p style="font-size: 1.6rem;"><span class="fw-bold" style="color: green">${movie.original_title}</span> is already exist in your watchlist</p>`): this.add(movie);
     }else{
       this.add(movie)
     }

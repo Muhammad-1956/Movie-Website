@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Movie } from '../../models/movie';
 import { Title } from '@angular/platform-browser';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-watchlist',
@@ -10,6 +11,7 @@ import { Title } from '@angular/platform-browser';
 export class WatchlistComponent {
   watchList: Movie | any;
   loading= false;
+  book: any;
   constructor(private title: Title){
     this.title.setTitle('Watchlist')
     this.loading= true
@@ -32,4 +34,21 @@ export class WatchlistComponent {
     }
     return movies
   }
+
+//Delete From Watchlist
+approval(){
+}
+deleteFromLocalStorage(movie: Movie | any){
+  if("watchlist" in localStorage){
+    this.watchList = JSON.parse(localStorage.getItem("watchlist")!)
+    console.log(this.watchList)
+    this.watchList.find((custom_item:any) => custom_item.original_title == movie.original_title) ? true : this.deleteFromLocalStorage(movie);
+    this.watchList = this.watchList.filter((item: any) => item.popularity !== movie.popularity)
+    console.log(this.watchList)
+    this.updateLocalStorage(this.watchList)
+  }
+}
+updateLocalStorage(watchlist: any){
+  localStorage.setItem("watchlist",JSON.stringify(watchlist))
+}
 }

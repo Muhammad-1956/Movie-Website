@@ -10,7 +10,6 @@ import { HomeComponent } from './movies/components/home/home.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo:'home', pathMatch: 'full'},
   {path: 'home', component:HomeComponent},
   {path: 'all-movies', component:AllMoviesComponent},
   {path: 'movie', component:MovieComponent},

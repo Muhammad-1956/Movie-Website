@@ -9,7 +9,7 @@ import { MoviesModule } from './movies/movies.module';
 import { HttpClientModule } from '@angular/common/http';
 import { OverlayModule } from "@angular/cdk/overlay";
 import { NgxPaginationModule } from 'ngx-pagination';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 
 @NgModule({
@@ -23,7 +23,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     HttpClientModule,
     OverlayModule,
     SharedModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    SweetAlert2Module
   ],
   providers: [],
   bootstrap: [AppComponent],

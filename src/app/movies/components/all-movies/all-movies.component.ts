@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MovieService } from '../../services/movie.service';
 import { Movie } from '../../models/movie';
 import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-all-movies',
@@ -28,9 +29,12 @@ export class AllMoviesComponent {
   movieTitle!: string;
   loading = false;
 
-  constructor(private db: MovieService, private title: Title){
+  constructor(private db: MovieService, private title: Title, private acRoute: ActivatedRoute){
     this.getPopularMovie();
-    this.title.setTitle('Movies')
+    const sagmentUrl = this.acRoute.snapshot.url[0].path;
+    if(sagmentUrl == 'all-movies'){
+      this.title.setTitle('Movies');
+    }
   }
   ngOnInit(){
   }

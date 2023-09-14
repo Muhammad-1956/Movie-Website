@@ -9,6 +9,6 @@ import { Title } from '@angular/platform-browser';
 export class HomeComponent {
 
   constructor(private title: Title){
-    this.title.setTitle('Home')
+    this.title.setTitle('Cinema 4U')
   }
 }

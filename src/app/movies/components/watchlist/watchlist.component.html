@@ -8,7 +8,7 @@
           <img src="{{movie.backdrop_path}}" alt="" class="card-img-top">
         </div>
         <div class="icons d-flex flex-column align-items-center">
-          <span><i class="fa-regular fa-bookmark movie-{{i}}" id="movie-{{i}}"></i></span>
+          <span><i (click)="deleteFromLocalStorage(movie)" class="fa-solid fa-bookmark movie-{{i}}" id="movie-{{i}}"></i></span>
           <span routerLink="/movie-details/{{movie.id}}"><i class="fa-regular fa-eye"></i></span>
         </div>
         <div class="card-body text-white">
@@ -21,7 +21,7 @@
   </div>
 </div>
 </section>
-<div class="div mt-4" *ngIf="!loading && !watchList">
+<div class="div mt-4" *ngIf="!loading && watchList.length == 0">
   <p class="alert alert-warning text-center h6 fw-bold text-wrap">
     There are no movies in your watchlist at the moment.
     Start adding movies by clicking the bookmark icon on a movie you want to watch.

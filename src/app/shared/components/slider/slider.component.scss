@@ -2,9 +2,12 @@ img{
   height: 72vh;
 }
 .carousel-control-next-icon, .carousel-control-prev-icon{
-  background-color: black;
   border-radius: 17px;
 }
 .carousel-indicators [data-bs-target] {
   padding: 0.2rem;
+}
+.carousel-indicators[_ngcontent-ng-c9726728] [data-bs-target][_ngcontent-ng-c9726728] {
+  width: 4px;
+  border-radius: 100%;
 }
